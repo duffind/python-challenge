@@ -12,7 +12,7 @@ def convert_to_int_dict(input_dict):
     return int_dict
 
 
-#Creat function that calculates the average of a specified dictionary.  Source:  https://www.tutorialspoint.com/How-to-sum-values-of-a-Python-dictionary
+#Create function that calculates the average of a specified dictionary.  Source:  https://www.tutorialspoint.com/How-to-sum-values-of-a-Python-dictionary
 
 def averageoflist(input):
     
@@ -21,12 +21,13 @@ def averageoflist(input):
 
     return average
 
+#Create new file for results output
+
 newfilepath = r"C:\Users\CLeeD\Documents\GitHub\python-challenge\PyBank\analysis\results.txt"
 
 with open(newfilepath, "w") as textfile:
     textfile.close
     
-
 #Open csv file and store it in budget_data variable as dictionary
 
 csvpath = r"C:\Users\CLeeD\Documents\GitHub\python-challenge\PyBank\Resources\budget_data.csv"
@@ -106,4 +107,3 @@ with open(newfilepath, "a") as textfile:
     textfile.close
 
 
-        
