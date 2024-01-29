@@ -23,14 +23,18 @@ def averageoflist(input):
 
 #Create new file for results output
 
-newfilepath = r"C:\Users\CLeeD\Documents\GitHub\python-challenge\PyBank\analysis\results.txt"
+absolute_pathnewfile = os.path.dirname(__file__)
+relative_pathnewfile = "analysis/results.txt"
+newfilepath = os.path.join(absolute_pathnewfile, relative_pathnewfile)
 
 with open(newfilepath, "w") as textfile:
     textfile.close
     
 #Open csv file and store it in budget_data variable as dictionary
 
-csvpath = r"C:\Users\CLeeD\Documents\GitHub\python-challenge\PyBank\Resources\budget_data.csv"
+absolute_pathcsv= os.path.dirname(__file__)
+relative_pathcsv = "Resources/budget_data.csv"
+csvpath = os.path.join(absolute_pathcsv, relative_pathcsv)
 
 with open(csvpath) as csvfile:
    csvreader = csv.reader(csvfile, delimiter=",")
