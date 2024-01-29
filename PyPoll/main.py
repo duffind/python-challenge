@@ -1,13 +1,20 @@
 import csv
+import os
 
 #Create new file for result publishing
-newfilepath = r"C:\Users\CLeeD\Documents\GitHub\python-challenge\PyPoll\analysis\electionresults.txt"
+
+absolute_pathnewfile = os.path.dirname(__file__)
+relative_pathnewfile = "analysis/electionresults.txt"
+newfilepath = os.path.join(absolute_pathnewfile, relative_pathnewfile)
 
 with open(newfilepath, "w") as textfile:
     textfile.close
 
 #Open election data
-csvpath = r"C:\Users\CLeeD\Documents\GitHub\python-challenge\PyPoll\Resources\election_data.csv"
+absolute_pathcsv= os.path.dirname(__file__)
+relative_pathcsv = "Resources/election_data.csv"
+csvpath = os.path.join(absolute_pathcsv, relative_pathcsv)
+
 
 with open(csvpath) as csvfile:
    csvreader = csv.reader(csvfile, delimiter=",")
